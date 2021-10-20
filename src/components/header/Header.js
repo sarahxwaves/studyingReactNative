@@ -6,7 +6,6 @@ const Header = props => {
     return (
         <HeaderContainer>
             <TextHeader>{props.title}</TextHeader>
-
         </HeaderContainer>
     
     );
