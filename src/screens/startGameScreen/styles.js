@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 export const Container = styled.View`
@@ -15,11 +14,21 @@ export const Title = styled.Text`
 
 `;
 
-export const SelectArea = styled.View``;
+export const SelectArea = styled.View`
+ padding: 20px;
+`;
 
 export const InputContainer = styled.View`
     align-items: center;
+    shadow-color: #000;
+    shadow-radius: 2.22px;
+    shadow-opacity: 0.22;
     elevation: 2;
+    background-color: #fff;
+    width: 300px;
+    max-width: 280px;
+    padding: 20px;
+    border-radius: 10px;
     
 
 `;
@@ -40,6 +49,8 @@ export const ResetButton = styled.TouchableOpacity`
     height: 25px;
     justify-content: center;
     align-items: center;
+    padding: 2px;
+    margin-right: 40px;
 
 `;
 

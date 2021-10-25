@@ -1,4 +1,6 @@
 import React from 'react';
+
+import Card from '../../components/card/Card';
 import {
     Container,
     Title, 
@@ -10,7 +12,6 @@ import {
     ResetButtonText,
     ConfirmButton,
     ConfirmButtonText,
-    InputContainer
 } from './styles';
 
 const StartGameScreen = props => {
@@ -18,10 +19,9 @@ const StartGameScreen = props => {
         <Container>
             <Title>Start a new game!</Title>
             <SelectArea>
-                <InputContainer>
+                <Card>
                 <SelectText>Select a number</SelectText>
-                <SelectInput placeholder="Select a number"/>
-                </InputContainer>
+                <SelectInput/>
 
             <SelectButtonArea>
                 <ResetButton onPress={() => {}}>
@@ -31,6 +31,7 @@ const StartGameScreen = props => {
                     <ConfirmButtonText>CONFIRM</ConfirmButtonText>
                 </ConfirmButton>
             </SelectButtonArea>
+                </Card>
             </SelectArea>
 
         </Container>
