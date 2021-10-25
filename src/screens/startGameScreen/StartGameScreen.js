@@ -1,6 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 
 import Card from '../../components/card/Card';
+import Input from '../../components/input/Input';
+
 import {
     Container,
     Title, 
@@ -15,13 +18,26 @@ import {
 } from './styles';
 
 const StartGameScreen = props => {
+
+  const [enteredValue, setEnteredValue] = useState('');
+
+  const numberInputHandler = inputText => {
+      setEnteredValue(inputText.replace(/[^0-9\\.]+/g, ''));
+  };
+
+
     return(
         <Container>
             <Title>Start a new game!</Title>
             <SelectArea>
                 <Card>
                 <SelectText>Select a number</SelectText>
-                <SelectInput/>
+                <Input 
+                value={enteredValue}
+                maxLength={2}
+                keyboardType="number-pad"
+                onChangeText={numberInputHandler}
+                />
 
             <SelectButtonArea>
                 <ResetButton onPress={() => {}}>
@@ -38,4 +54,8 @@ const StartGameScreen = props => {
 
     );
 };
+
+StartGameScreen.PropTypes = {
+
+}
 export default StartGameScreen;
