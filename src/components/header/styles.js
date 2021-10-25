@@ -7,12 +7,11 @@ export const HeaderContainer = styled.View`
     background-color: #FFB6C1;
     align-items: center;
     justify-content: center;
+    
 `;
 
 export const TextHeader = styled.Text`
     color: #000;
-    font-size: 18px;
-
-
+    font-size: 22px;
 `;
 
